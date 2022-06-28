@@ -1,0 +1,14 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+   Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Fri 2022-06-03 03:31:23 UTC; 10s ago
+ Main PID: 32195 (gunicorn)
+    Tasks: 2 (limit: 4915)
+   CGroup: /system.slice/gunicorn.service
+           ├─32195 /home/ubuntu/anaconda3/envs/chat/bin/python /home/ubuntu/anaconda3/envs/chat/bin/gunicorn --workers 1 --bind 0:8000 chat_app.wsgi:application
+           └─32219 /home/ubuntu/anaconda3/envs/chat/bin/python /home/ubuntu/anaconda3/envs/chat/bin/gunicorn --workers 1 --bind 0:8000 chat_app.wsgi:application
+
+Jun 03 03:31:23 ip-172-31-7-166 systemd[1]: Started gunicorn daemon.
+Jun 03 03:31:23 ip-172-31-7-166 gunicorn[32195]: [2022-06-03 03:31:23 +0000] [32195] [INFO] Starting gunicorn 20.1.0
+Jun 03 03:31:23 ip-172-31-7-166 gunicorn[32195]: [2022-06-03 03:31:23 +0000] [32195] [INFO] Listening at: http://0.0.0.0:8000 (32195)
+Jun 03 03:31:23 ip-172-31-7-166 gunicorn[32195]: [2022-06-03 03:31:23 +0000] [32195] [INFO] Using worker: sync
+Jun 03 03:31:23 ip-172-31-7-166 gunicorn[32195]: [2022-06-03 03:31:23 +0000] [32219] [INFO] Booting worker with pid: 32219
